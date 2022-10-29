@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,500&family=Poppins:wght@600&family=Roboto:ital,wght@1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'montserrat' ,sans-serif;
+    background-color: hsl(30, 38%, 90%);
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+}
+.grid{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img img{
+    max-width: 100%;
+    display: inherit;
+    
+}
+
+.card-content{
+    display: flex;
+    padding: 35px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h6.pro-cat{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: hsl(228, 12%, 48%);
+}
+
+h2.pro-name{
+    font-family: 'Fraunces',serif;
+    font-size: 34px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+
+}
+
+p.pro-desc{
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6em;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+p.current{
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 25px;
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces',serif;
+}
+
+p.old{
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    /* padding-left: ; */
+}
+
+button.cta{
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 12px 0;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.5s ease;
+    width: 100%;
+}
+
+button.cta:hover{
+    background-color: hsl(158, 36%, 23%);
+
+}
+
+button.cta img{
+    padding-right: 7px;
+}
+
+@media only screen and (max-width:628px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .img img{
+        max-height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-content{
+        display: block;
+    }
+    
+    h6.pro-cat , h2.pro-name , p.pro-desc , .price{
+        padding-bottom: 23px;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .container{
+        padding: 0 15px;
+        margin: 15px auto;
+    }
+    .img img{
+        max-height: 290px;
+    }
+    .card-content{
+        padding: 24px;
+    }
+    h6.pro-cat , h2.pro-name , p.pro-desc , .price{
+        padding-bottom: 16px;
+    }
+    h2.pro-name{
+        font-size: 28px;
+    }
+    p.pro-desc{
+        font-size: 12px;
+    }
+    p.current{
+        font-size: 23px;
+    }
+    
+}
